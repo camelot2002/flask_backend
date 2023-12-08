@@ -1,0 +1,341 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour/"
+     xml:base="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:chequeDishonour="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#drawnBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#drawnBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#Cheque"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#Party"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#hasStage -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#hasStage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#Cheque"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#CaseStage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#issuedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#issuedTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#Cheque"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#Party"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#nextProceeding -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#nextProceeding">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#CaseStage"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#CaseStage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#name"/>
+    
+
+
+    <!-- http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#reasonForChequeDishonour -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#reasonForChequeDishonour"/>
+    
+
+
+    <!-- http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#stageDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#stageDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#CaseStage"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#BearerCheque -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#BearerCheque">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#Cheque"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#CrossedCheque"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#CaseStage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#CaseStage"/>
+    
+
+
+    <!-- http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#Cheque -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#Cheque">
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#BearerCheque"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#CrossedCheque"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#CrossedCheque -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#CrossedCheque">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#Cheque"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#LegalProceedings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#LegalProceedings">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#CaseStage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#Party -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#Party"/>
+    
+
+
+    <!-- http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#Resolution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#Resolution">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#CaseStage"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#compensation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#compensation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#Resolution"/>
+        <chequeDishonour:nextProceeding rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#monetaryPenalty"/>
+        <chequeDishonour:name>Compensation</chequeDishonour:name>
+        <chequeDishonour:stageDescription>Upon the court&apos;s judgment favoring the payee or the aggrieved party due to a bounced cheque, this stage involves enforcing the payment of compensation by the drawer. The court-ordered compensation aims to reimburse the aggrieved party for the bounced cheque amount and may include additional damages or costs as deemed appropriate by the court.</chequeDishonour:stageDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#filingOfComplaint_lp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#filingOfComplaint_lp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#LegalProceedings"/>
+        <chequeDishonour:stageDescription>As a consequence of the drawer&apos;s non-compliance or non-payment, this stage involves initiating legal action by filing a formal complaint or case against the drawer in a court of law. The complaint details the bounced cheque incident, the prior legal notice, and the subsequent non-response or non-payment by the drawer. This legal step marks the formal commencement of legal proceedings to address the bounced cheque matter legally.</chequeDishonour:stageDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#imprisonment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#imprisonment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#Resolution"/>
+        <chequeDishonour:name>Imprisonment</chequeDishonour:name>
+        <chequeDishonour:stageDescription>In severe cases or instances of repeated offenses related to bounced cheques, this stage involves the court&apos;s verdict of imprisonment against the drawer. The court may order imprisonment as a punitive measure, aiming to hold the drawer legally accountable for the offense and deter future instances of defaulting on payments.</chequeDishonour:stageDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#insufficientFunds_cheque1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#insufficientFunds_cheque1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#Cheque"/>
+        <chequeDishonour:drawnBy rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#payerParty"/>
+        <chequeDishonour:issuedTo rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#payeeParty"/>
+        <chequeDishonour:name>Insufficient Funds</chequeDishonour:name>
+        <chequeDishonour:reasonForChequeDishonour>Insufficient Funds in the Drawee/Payer&apos;s bank account.</chequeDishonour:reasonForChequeDishonour>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#judgementAndOrder_lp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#judgementAndOrder_lp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#LegalProceedings"/>
+        <chequeDishonour:nextProceeding rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#compensation"/>
+        <chequeDishonour:stageDescription>At this conclusive stage, the court delivers its decision or judgment based on the presented evidence, legal arguments, and considerations during the trial. The court issues orders or directives, potentially requiring payment of the bounced cheque amount, along with any associated penalties or legal consequences. The court&apos;s judgment concludes the legal proceedings related to the bounced cheque case. No subsequent legal proceeding follows after the judgment and order.</chequeDishonour:stageDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#monetaryPenalty -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#monetaryPenalty">
+        <rdf:type rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#Resolution"/>
+        <chequeDishonour:nextProceeding rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#imprisonment"/>
+        <chequeDishonour:name>Monetary Penalty</chequeDishonour:name>
+        <chequeDishonour:stageDescription>As part of the court&apos;s judgment, this stage encompasses the imposition of a monetary penalty or fine upon the drawer due to the bounced cheque. The court may levy a financial penalty on top of the compensation amount, considering the severity of the bounced transaction and as a deterrent against similar offenses.</chequeDishonour:stageDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#nonResponseOrNonPayment_lp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#nonResponseOrNonPayment_lp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#LegalProceedings"/>
+        <chequeDishonour:nextProceeding rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#filingOfComplaint_lp"/>
+        <chequeDishonour:stageDescription>In the event of the drawer&apos;s non-response or failure to make the payment within the stipulated waiting period, this stage signifies the absence of any corrective action or payment resolution. Despite the issuance of the legal notice and the allocated waiting time, no response or payment is initiated by the drawer. This non-response or non-payment after the waiting period indicates a lack of compliance.</chequeDishonour:stageDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#noticeIssuance_lp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#noticeIssuance_lp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#LegalProceedings"/>
+        <chequeDishonour:nextProceeding rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#waitingPeriod_lp"/>
+        <chequeDishonour:name>Issuance Of Notice</chequeDishonour:name>
+        <chequeDishonour:stageDescription>This stage involves sending a formal legal notice to the drawer of the bounced cheque, explicitly demanding payment for the bounced amount. The notice outlines the specifics of the bounced transaction, including the cheque details, the due amount, and a stipulated time for payment resolution. This initial step serves as an official communication to address the bounced cheque matter.</chequeDishonour:stageDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#payeeParty -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#payeeParty">
+        <rdf:type rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#Party"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#payerParty -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#payerParty">
+        <rdf:type rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#Party"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#summonsAndCourtProceedings_lp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#summonsAndCourtProceedings_lp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#LegalProceedings"/>
+        <chequeDishonour:nextProceeding rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#trialAndEvidencePresentation_lp"/>
+        <chequeDishonour:stageDescription>Following the filing of the complaint, this stage involves the court summoning all involved parties to appear and partake in legal proceedings. The court conducts hearings, allowing the presentation of evidence, arguments, and testimonies related to the bounced cheque case. This stage comprises various court proceedings where both parties provide their perspectives and evidence to support their claims</chequeDishonour:stageDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#trialAndEvidencePresentation_lp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#trialAndEvidencePresentation_lp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#LegalProceedings"/>
+        <chequeDishonour:stageDescription>Within this stage, the trial continues, emphasizing the presentation and examination of evidence, witness testimonies, legal arguments, and counterarguments by the involved parties. The court analyzes the presented evidence, evaluates legal aspects, and proceeds with the trial proceedings to reach a comprehensive understanding of the case.</chequeDishonour:stageDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#waitingPeriod_lp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#waitingPeriod_lp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#LegalProceedings"/>
+        <chequeDishonour:nextProceeding rdf:resource="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#nonResponseOrNonPayment_lp"/>
+        <chequeDishonour:name>Waiting Period</chequeDishonour:name>
+        <chequeDishonour:stageDescription>Following the issuance of the legal notice, a designated time frame is provided to the drawer for settling the bounced cheque amount. This period, typically stipulated in the notice, allows the drawer the opportunity to rectify the bounced transaction by making the due payment. The waiting period accounts for reasonable time for payment resolution before further legal actions are pursued.</chequeDishonour:stageDescription>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#CaseStage"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#Cheque"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#Party"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
