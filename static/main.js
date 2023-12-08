@@ -25,7 +25,8 @@ document
         return response.text();
       })
       .then((result) => {
-        queryResult.innerHTML = `${result}`;
+        const formattedResult = result.split("\\n").join("\n").replace(/[\[\]"]/g, "").replace(/,/g, "");
+        queryResult.innerText = formattedResult;
       })
       .catch((error) => {
         console.error("Error:", error);

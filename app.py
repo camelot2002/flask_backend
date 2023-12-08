@@ -39,7 +39,7 @@ queries = {
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
         prefix table:<http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#>
 
-        SELECT ?resName ?resDesc
+        SELECT ?resName ?resDesc ?resolution
         WHERE {
             ?resolution rdf:type table:Resolution .
             ?resolution table:name ?resName .
@@ -56,6 +56,16 @@ queries = {
             ?proceeding rdf:type table:LegalProceedings .
             ?proceeding table:name ?pName.
             ?proceeding table:stageDescription ?proDesc .
+        }
+    """,
+    "query5": """
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        PREFIX chequeDishonour: <http://www.semanticweb.org/camelot/ontologies/2023/11/chequeDishonour#>
+
+        SELECT ?proceedingName ?description
+        WHERE {
+        ?legalProceeding chequeDishonour:name ?proceedingName.
+        ?legalProceeding chequeDishonour:stageDescription ?description.
         }
     """
 }
@@ -81,7 +91,7 @@ def receive_query():
                 final.append("\n")
             return final
         except Exception as e:
-            print(f"Query execution error: {e}")  # Print any query execution error
+            # print(f"Query execution error: {e}")  # Print any query execution error
             return jsonify({"error": "Query execution error"})
     else:   
         return jsonify({"error": "Invalid query name"})
