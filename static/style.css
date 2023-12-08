@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Georgia", "Times New Roman", "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-title {
+  background-color: #3498db;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+main {
+  flex: 1;
+  width: 60vw;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.query-form {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.query-label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.query-input {
+  width: calc(100% - 16px);
+  padding: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.query-result {
+  min-height: 50vh;
+  margin-bottom: 20px;
+}
+
+.submit-button,
+.visualization-button {
+  padding: 12px 24px;
+  cursor: pointer;
+  margin-top: 8px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+}
+
+.submit-button {
+  background-color: #27ae60;
+}
+
+.visualization-button {
+  background-color: #e74c3c;
+}
+
+/* About Section at the Bottom */
+.about-section {
+  display: inline-block;
+  background-color: #34495e;
+  padding: 2rem;
+  color: white;
+  font-family: "Georgia", "Times New Roman", "Arial", sans-serif;
+  line-height: 1.6;
+  transition: opacity 0.5s ease; /* Add a smooth transition effect */
+}
